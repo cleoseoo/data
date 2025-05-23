@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>입력-표-셀지정 메뉴 SVG</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    text {
+      font-size: 12px;
+      fill: #000;
+    }
+  </style>
+</head>
+<body>
+  <svg width="600" height="250">
+    <!-- 상단 탭 목록 -->
+    <g transform="translate(10, 20)">
+      <text x="0" y="0">파일</text>
+      <text x="40" y="0">편집 ▼</text>
+      <text x="90" y="0">보기 ▼</text>
+      <rect x="140" y="-15" width="40" height="20" fill="#d0e4fd" stroke="#999"/>
+      <text x="145" y="0" font-weight="bold">입력 ▼</text>
+      <text x="200" y="0">서식 ▼</text>
+      <text x="250" y="0">쪽 ▼</text>
+      <text x="290" y="0">보안 ▼</text>
+      <text x="340" y="0">검토 ▼</text>
+    </g>
+
+    <!-- 드롭다운 메뉴 -->
+    <g transform="translate(140, 30)">
+      <rect x="0" y="0" width="180" height="260" fill="#fff" stroke="#aaa" rx="4"/>
+      <g transform="translate(10, 10)">
+        <!-- 메뉴 항목 6개, 간격 일정 (35씩 증가) -->
+
+        <!-- 도형(G) -->
+        <g transform="translate(0, 0)">
+          <circle cx="10" cy="10" r="4" fill="#8bc34a"/>
+          <rect x="14" y="6" width="8" height="8" fill="#4caf50"/>
+          <polygon points="10,16 18,16 14,22" fill="#2e7d32"/>
+          <text x="30" y="14">도형(G)</text>
+          <polygon points="150,10 156,14 150,18" fill="#444"/>
+        </g>
+
+        <!-- 그림(P) -->
+        <g transform="translate(0, 35)">
+          <rect x="6" y="4" width="16" height="12" fill="#cce5ff" stroke="#aaa"/>
+          <polygon points="7,14 12,8 17,14" fill="#3399ff"/>
+          <circle cx="10" cy="7" r="2" fill="#000"/>
+          <text x="30" y="12">그림(P)</text>
+          <polygon points="150,8 156,12 150,16" fill="#444"/>
+        </g>
+
+        <!-- 표(T) -->
+        <g transform="translate(0, 70)">
+          <g stroke="#555" fill="#fff">
+            <rect x="-2" y="-5" width="165" height="25" fill="#d0e4fd" stroke="#999"/>
+            <rect x="6" y="0" width="18" height="4"/>
+            <rect x="6" y="4" width="6" height="4"/>
+            <rect x="12" y="4" width="6" height="4"/>
+            <rect x="18" y="4" width="6" height="4"/>
+            <rect x="6" y="8" width="6" height="4"/>
+            <rect x="12" y="8" width="6" height="4"/>
+            <rect x="18" y="8" width="6" height="4"/>
+            <rect x="6" y="12" width="6" height="4"/>
+            <rect x="12" y="12" width="6" height="4"/>
+            <rect x="18" y="12" width="6" height="4"/>
+          </g>
+          <text x="30" y="14" font-weight="bold">표(T)</text>
+          <polygon points="150,4 156,8 150,12" fill="#444"/>
+        </g>
+
+        <!-- 차트(J) -->
+        <g transform="translate(0, 105)">
+          <rect x="6" y="7" width="2" height="8" fill="#888"/>
+          <rect x="9" y="3" width="2" height="12" fill="#888"/>
+          <rect x="12" y="-1" width="2" height="16" fill="#888"/>
+          <text x="30" y="12">차트(J)</text>
+          <polygon points="150,2 156,6 150,10" fill="#444"/>
+        </g>
+
+        <!-- 글상자(Q) -->
+        <g transform="translate(0, 140)">
+          <rect x="6" y="0" width="14" height="10" fill="#fff" stroke="#aaa"/>
+          <text x="8" y="8" font-size="8">ㄱ</text>
+          <line x1="7" y1="9" x2="18" y2="9" stroke="#aaa" stroke-width="0.5"/>
+          <line x1="7" y1="10" x2="18" y2="10" stroke="#aaa" stroke-width="0.5"/>
+          <line x1="7" y1="11" x2="18" y2="11" stroke="#aaa" stroke-width="0.5"/>
+          <line x1="7" y1="12" x2="18" y2="12" stroke="#aaa" stroke-width="0.5"/>
+          <text x="30" y="8">글상자(Q)</text>
+          <text x="110" y="8" font-size="10">Ctrl+N, B</text>
+        </g>
+
+        <!-- 멀티미디어(R) -->
+        <g transform="translate(0, 175)">
+          <text x="30" y="8">멀티미디어(R)</text>
+          <polygon points="150,4 156,8 150,12" fill="#444"/>
+        </g>
+      </g>
+    </g>
+
+  <svg width="1000" height="520">
+    <!-- 셀 선택 창: 10행 × 5열, 여백 5mm ≒ 18.9px -->
+    <g transform="translate(390, 54)">
+      <rect x="-75" y="50" width="170" height="205" fill="#fff" stroke="#aaa" rx="6"/>
+      <text x="-20" y="70" font-size="14">3줄 × 5칸</text>
+      <g transform="translate(5, 25)">
+        <!-- 회색 셀 10행 × 5열 -->
+        <g fill="#eee" stroke="#ccc">
+          <!-- 각 셀 25×20 크기 -->
+          <!-- 행 0~9, 열 0~4 -->
+          <!-- 총 50 셀 수동 생성 -->
+          <!-- row 0 -->
+          <rect x="-70" y="55" width="25" height="20"/>
+          <rect x="-45" y="55" width="25" height="20"/>
+          <rect x="-20" y="55" width="25" height="20"/>
+          <rect x="5" y="55" width="25" height="20"/>
+          <rect x="30" y="55" width="25" height="20"/>
+          <rect x="55" y="55" width="25" height="20"/>
+
+          <!-- row 1 -->
+          <rect x="-70" y="75" width="25" height="20"/>
+          <rect x="-45" y="75" width="25" height="20"/>
+          <rect x="-20" y="75" width="25" height="20"/>
+          <rect x="5" y="75" width="25" height="20"/>
+          <rect x="30" y="75" width="25" height="20"/>
+          <rect x="55" y="75" width="25" height="20"/>
+
+          <!-- row 2 -->
+          <rect x="-70" y="95" width="25" height="20"/>
+          <rect x="-45" y="95" width="25" height="20"/>
+          <rect x="-20" y="95" width="25" height="20"/>
+          <rect x="5" y="95" width="25" height="20"/>
+          <rect x="30" y="95" width="25" height="20"/>
+          <rect x="55" y="95" width="25" height="20"/>
+
+          <!-- row 3 -->
+          <rect x="-70" y="115" width="25" height="20"/>
+          <rect x="-45" y="115" width="25" height="20"/>
+          <rect x="-20" y="115" width="25" height="20"/>
+          <rect x="5" y="115" width="25" height="20"/>
+          <rect x="30" y="115" width="25" height="20"/>
+          <rect x="55" y="115" width="25" height="20"/>
+
+
+          <!-- row 4 -->
+          <rect x="-70" y="135" width="25" height="20"/>
+          <rect x="-45" y="135" width="25" height="20"/>
+          <rect x="-20" y="135" width="25" height="20"/>
+          <rect x="5" y="135" width="25" height="20"/>
+          <rect x="30" y="135" width="25" height="20"/>
+          <rect x="55" y="135" width="25" height="20"/>
+
+
+          <!-- row 5 -->
+          <rect x="-70" y="155" width="25" height="20"/>
+          <rect x="-45" y="155" width="25" height="20"/>
+          <rect x="-20" y="155" width="25" height="20"/>
+          <rect x="5" y="155" width="25" height="20"/>
+          <rect x="30" y="155" width="25" height="20"/>
+          <rect x="55" y="155" width="25" height="20"/>
+
+
+          <!-- row 6 -->
+          <rect x="-70" y="175" width="25" height="20"/>
+          <rect x="-45" y="175" width="25" height="20"/>
+          <rect x="-20" y="175" width="25" height="20"/>
+          <rect x="5" y="175" width="25" height="20"/>
+          <rect x="30" y="175" width="25" height="20"/>
+          <rect x="55" y="175" width="25" height="20"/>
+
+
+          <!-- row 7 -->
+          <rect x="-70" y="195" width="25" height="20"/>
+          <rect x="-45" y="195" width="25" height="20"/>
+          <rect x="-20" y="195" width="25" height="20"/>
+          <rect x="5" y="195" width="25" height="20"/>
+          <rect x="30" y="195" width="25" height="20"/>
+          <rect x="55" y="195" width="25" height="20"/>
+        </g>
+
+        <!-- 주황 셀 강조: 상단 3행 × 5열 -->
+        <g fill="#f88" stroke="#c33">
+          <!-- row 0 -->
+          <rect x="-70" y="55" width="25" height="20"/>
+          <rect x="-45" y="55" width="25" height="20"/>
+          <rect x="-20" y="55" width="25" height="20"/>
+          <rect x="5" y="55" width="25" height="20"/>
+          <rect x="30" y="55" width="25" height="20"/>
+
+
+          <!-- row 1 -->
+          <rect x="-70" y="75" width="25" height="20"/>
+          <rect x="-45" y="75" width="25" height="20"/>
+          <rect x="-20" y="75" width="25" height="20"/>
+          <rect x="5" y="75" width="25" height="20"/>
+          <rect x="30" y="75" width="25" height="20"/>
+
+
+          <!-- row 2 -->
+          <rect x="-70" y="95" width="25" height="20"/>
+          <rect x="-45" y="95" width="25" height="20"/>
+          <rect x="-20" y="95" width="25" height="20"/>
+          <rect x="5" y="95" width="25" height="20"/>
+          <rect x="30" y="95" width="25" height="20"/>
+
+        </g>
+      </g>
+    </g>
+  </svg>
+</body>
+</html>

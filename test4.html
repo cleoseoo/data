@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>스마트폰 사용 시간 설문 결과</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    text {
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+<svg width="500" height="250">
+  <!-- 제목 -->
+  <g transform="translate(10, 8)">
+    <text x="20" y="10" font-size="14" font-weight="bold">
+      스마트폰 사용 시간과 수면 시간의 상관 관계 분석 설문(응답)
+    </text>
+  </g>
+
+  <!-- 표 영역 -->
+  <g transform="translate(10, 30)">
+    <!-- 배경 행 -->
+    <rect x="0" y="170" width="570" height="18" fill="white" stroke="#ddd"/>
+    <rect x="0" y="152" width="570" height="18" fill="white" stroke="#ddd"/>
+    <rect x="0" y="134" width="570" height="18" fill="white" stroke="#ddd"/>
+    <rect x="0" y="116" width="570" height="18" fill="white" stroke="#ddd"/>
+    <rect x="0" y="98" width="570" height="18" fill="white" stroke="#ddd"/>
+    <rect x="0" y="80" width="570" height="18" fill="white" stroke="#ddd"/>
+    <rect x="0" y="62" width="570" height="18" fill="white" stroke="#ddd"/>
+    <rect x="0" y="44" width="570" height="18" fill="white" stroke="#ddd"/>
+    <rect x="0" y="26" width="570" height="18" fill="#f8f9fa" stroke="#ddd"/>
+
+    <!-- 스프레드시트 아이콘 -->
+    <rect x="0" y="-20" width="14" height="31" fill="#0f9d58" rx="2"/>
+
+    <!-- 세로 줄 -->
+    <line x1="40" y1="26" x2="40" y2="188" stroke="#bbb" stroke-width="1"/>
+    <line x1="175" y1="26" x2="175" y2="188" stroke="#bbb" stroke-width="1"/>
+    <line x1="315" y1="26" x2="315" y2="188" stroke="#bbb" stroke-width="1"/>
+    <line x1="450" y1="26" x2="450" y2="188" stroke="#bbb" stroke-width="1"/>
+    <!-- 2행 2열 표 (흰색 선) -->
+    <rect x="2" y="-4" width="5" height="8" fill="none" stroke="white" stroke-width="0.8"/>
+    <rect x="7" y="-4" width="5" height="8" fill="none" stroke="white" stroke-width="0.8"/>
+    <rect x="2" y="-12" width="5" height="8" fill="none" stroke="white" stroke-width="0.8"/>
+    <rect x="7" y="-12" width="5" height="8" fill="none" stroke="white" stroke-width="0.8"/>
+
+
+    <!-- 회색 탭 배경 -->
+    <rect x="20" y="-8" width="550" height="18" fill="#eee" stroke="#ccc"/>
+
+    <!-- 열 라벨, fx 줄, 데이터 삽입 -->
+    <g transform="translate(10, 34)">
+      <!-- 열 라벨 -->
+      <text x="100" y="4.5" text-anchor="middle">A</text>
+      <text x="235" y="4.5" text-anchor="middle">B</text>
+      <text x="375" y="4.5" text-anchor="middle">C</text>
+      <text x="500" y="4.5" text-anchor="middle">D</text>
+
+      <!-- 행 번호 -->
+      <text x="9" y="22" text-anchor="middle">1</text>
+      <text x="9" y="40.5" text-anchor="middle">2</text>
+      <text x="9" y="59.5" text-anchor="middle">3</text>
+      <text x="9" y="76.5" text-anchor="middle">4</text>
+      <text x="9" y="95.5" text-anchor="middle">5</text>
+      <text x="9" y="113" text-anchor="middle">6</text>
+      <text x="9" y="132" text-anchor="middle">7</text>
+      <text x="9" y="148.5" text-anchor="middle">8</text>
+
+      <!-- fx 줄 -->
+      <text x="0" y="-12" font-size="10">E8</text>
+      <text x="53" y="-12" font-size="10">▼</text>
+      <text x="70" y="-12" font-size="10">|</text>
+      <text x="83" y="-12" font-size="10" font-weight="bold">fx</text>
+
+      <!-- A열 데이터 -->
+      <text x="100" y="22" text-anchor="middle">1. 자신의 하루 수면 시간은?</text>
+      <text x="100" y="40.5" text-anchor="middle">1</text>
+      <text x="100" y="59.5" text-anchor="middle">2</text>
+      <text x="100" y="76.5" text-anchor="middle">3</text>
+      <text x="100" y="95.5" text-anchor="middle">3</text>
+      <text x="100" y="113" text-anchor="middle">4</text>
+      <text x="100" y="132" text-anchor="middle">4</text>
+      <text x="100" y="148.5" text-anchor="middle">5</text>
+
+      <!-- B열 데이터 -->
+      <text x="235" y="22" text-anchor="middle">2. 하루 스마트폰 사용 시간은?</text>
+      <text x="235" y="40.5" text-anchor="middle">8시간</text>
+      <text x="235" y="59.5" text-anchor="middle">8시간</text>
+      <text x="235" y="76.5" text-anchor="middle">7시간 30분</text>
+      <text x="235" y="95.5" text-anchor="middle">7시간</text>
+      <text x="235" y="113" text-anchor="middle">6시간</text>
+      <text x="235" y="132" text-anchor="middle">5시간</text>
+      <text x="235" y="148.5" text-anchor="middle">5시간</text>
+    </g>
+
+    <!-- 메뉴 항목 -->
+    <text x="30" y="4.5">파일</text>
+    <text x="70" y="4.5">수정</text>
+    <text x="110" y="4.5">보기</text>
+    <text x="150" y="4.5">삽입</text>
+    <text x="190" y="4.5">서식</text>
+    <text x="230" y="4.5">데이터</text>
+    <text x="280" y="4.5">도구</text>
+    <text x="320" y="4.5">확장 프로그램</text>
+    <text x="420" y="4.5">도움말</text>
+  </g>
+</svg>
+</body>
+</html>

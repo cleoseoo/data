@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>스마트폰 사용 시간 설문 결과</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    text {
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+  <svg width="600" height="200">
+    <!-- 제목 -->
+    <g transform="translate(10, 8)">
+      <text x="20" y="10" font-size="14" font-weight="bold">
+        스마트폰 사용 시간과 수면 시간의 상관 관계 분석 설문(응답)
+      </text>
+    </g>
+
+    <!-- 상단 메뉴바 -->
+    <g transform="translate(10, 30)">
+      <!-- 스프레드시트 아이콘 -->
+      <rect x="0" y="152" width="570" height="18" fill="white" stroke="#ddd"/>
+      <rect x="0" y="134" width="570" height="18" fill="white" stroke="#ddd"/>
+      <rect x="0" y="116" width="570" height="18" fill="white" stroke="#ddd"/>
+      <rect x="0" y="98" width="570" height="18" fill="white" stroke="#ddd"/>
+      <rect x="0" y="80" width="570" height="18" fill="white" stroke="#ddd"/>
+      <rect x="0" y="62" width="570" height="18" fill="white" stroke="#ddd"/>
+      <rect x="0" y="44" width="570" height="18" fill="white" stroke="#ddd"/>
+      <rect x="0" y="26" width="570" height="18" fill="white" stroke="#ddd"/>
+      <rect x="0" y="8" width="570" height="18" fill="#f8f9fa" stroke="#ddd"/>
+      <rect x="0" y="-20" width="14" height="31" fill="#0f9d58" rx="2"/>0
+      <line x1="120" y1="-5" x2="120" y2="170" stroke="#bbb" stroke-width="1"/>
+      <line x1="250" y1="-5" x2="250" y2="170" stroke="#bbb" stroke-width="1"/>
+      <line x1="410" y1="-5" x2="410" y2="170" stroke="#bbb" stroke-width="1"/>
+      <!-- 2행 2열 표 (흰색 선) -->
+      <rect x="2" y="-4" width="5" height="8" fill="none" stroke="white" stroke-width="0.8"/>
+      <rect x="7" y="-4" width="5" height="8" fill="none" stroke="white" stroke-width="0.8"/>
+      <rect x="2" y="-12" width="5" height="8" fill="none" stroke="white" stroke-width="0.8"/>
+      <rect x="7" y="-12" width="5" height="8" fill="none" stroke="white" stroke-width="0.8"/>
+
+      <!-- 회색 탭 배경 -->
+      <rect x="20" y="-8" width="550" height="18" fill="#eee" stroke="#ccc"/>
+
+    <!-- 스프레드시트 상단 열 라벨 (A, B, C, ...) -->
+    <g transform="translate(10, 24)">
+      <text x="50" y="-4.5" text-anchor="middle">A</text>
+      <text x="175" y="-4.5" text-anchor="middle">B</text>
+      <text x="320" y="-4.5" text-anchor="middle">C</text>
+      <text x="485" y="-4.5" text-anchor="middle">D</text>
+    </g>
+
+      <!-- 메뉴 항목 -->
+      <text x="30" y="4.5">파일</text>
+      <text x="70" y="4.5">수정</text>
+      <text x="110" y="4.5">보기</text>
+      <text x="150" y="4.5">삽입</text>
+      <text x="190" y="4.5">서식</text>
+      <text x="230" y="4.5">데이터</text>
+      <text x="280" y="4.5">도구</text>
+      <text x="320" y="4.5">확장 프로그램</text>
+      <text x="420" y="4.5">도움말</text>
+    </g>
+
+    <!-- 시트 탭 -->
+    <g transform="translate(10, 50)">
+      <!-- 보라 배경 -->
+      <rect x="0" y="0" width="300" height="25" fill="#673ab7" rx="5"/>
+      <!-- 시트 탭 강조 -->
+      <rect x="0" y="0" width="110" height="25" fill="#5e35b1" rx="5"/>
+      <text x="55" y="17" fill="white" text-anchor="middle" font-weight="bold">Form_Responses1</text>
+    </g>
+
+    <!-- 표 테두리 -->
+    <g transform="translate(10, 75)">
+      <!-- 열 헤더 배경 -->
+      <rect x="0" y="0" width="240" height="20" fill="#673ab7" rx="5"/>
+      <rect x="240" y="0" width="180" height="20" fill="#673ab7" rx="5"/>
+      <rect x="420" y="0" width="140" height="20" fill="#673ab7" rx="5"/>
+
+      <!-- 열 헤더 텍스트 + 화살표 -->
+      <text x="120" y="14" fill="white" text-anchor="middle">타임스탬프</text>
+      <polygon points="230,8 235,13 240,8" fill="white"/>
+
+      <text x="330" y="14" fill="white" text-anchor="middle">1. 일일 하루 수면 시간은?</text>
+      <polygon points="410,8 415,13 420,8" fill="white"/>
+
+      <text x="490" y="14" fill="white" text-anchor="middle">2. 하루 스마트폰 사용 시간은?</text>
+      <polygon points="550,8 555,13 560,8" fill="white"/>
+
+      <!-- 셀 테두리 및 데이터 -->
+      <g fill="#000" font-size="10">
+        <g>
+          <rect x="0" y="20" width="240" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <rect x="240" y="20" width="180" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <rect x="420" y="20" width="140" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <text x="120" y="34" text-anchor="middle">2025. 5. 7. 오후 1:45:37</text>
+          <text x="330" y="34" text-anchor="middle">1</text>
+          <text x="490" y="34" text-anchor="middle">8시간</text>
+        </g>
+        <g>
+          <rect x="0" y="40" width="240" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <rect x="240" y="40" width="180" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <rect x="420" y="40" width="140" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <text x="120" y="54" text-anchor="middle">2025. 5. 8. 오후 1:50:20</text>
+          <text x="330" y="54" text-anchor="middle">2</text>
+          <text x="490" y="54" text-anchor="middle">8시간</text>
+        </g>
+        <g>
+          <rect x="0" y="60" width="240" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <rect x="240" y="60" width="180" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <rect x="420" y="60" width="140" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <text x="120" y="74" text-anchor="middle"></text>
+          <text x="330" y="74" text-anchor="middle">3</text>
+          <text x="490" y="74" text-anchor="middle">7시간 30분</text>
+        </g>
+        <g>
+          <rect x="0" y="80" width="240" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <rect x="240" y="80" width="180" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <rect x="420" y="80" width="140" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <text x="120" y="94" text-anchor="middle"></text>
+          <text x="330" y="94" text-anchor="middle">3</text>
+          <text x="490" y="94" text-anchor="middle">7시간</text>
+        </g>
+        <g>
+          <rect x="0" y="100" width="240" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <rect x="240" y="100" width="180" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <rect x="420" y="100" width="140" height="20" fill="#fff" stroke="#ccc" rx="5"/>
+          <text x="120" y="114" text-anchor="middle"></text>
+          <text x="330" y="114" text-anchor="middle">4</text>
+          <text x="490" y="114" text-anchor="middle">6시간</text>
+        </g>
+      </g>
+    </g>
+  </svg>
+</body>
+</html>
