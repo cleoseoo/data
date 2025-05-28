@@ -229,10 +229,9 @@ const pinkButtons = [8, 9, 10, 11, 12]; //
     bus.classList.remove("shake");
   });
 btn.addEventListener("click", () => {
-  openModal(index);
+  const file = btn.getAttribute("data-file");
+  window.location.href = file;
 });
-
- });
 
 </script>
 <!-- ✅ 모달 창 HTML -->
